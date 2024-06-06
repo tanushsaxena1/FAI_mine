@@ -46,10 +46,12 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     display: block;
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
 }
 
 main {
-    padding: 2em;
+    padding: 2em 0; /* Adjust padding */
     text-align: center;
     width: 100%;
     background-color: #000; /* Set background color to black */
@@ -150,3 +152,4 @@ button:hover {
 .mt-5 {
     margin-top: 1.25rem;
 }
+
