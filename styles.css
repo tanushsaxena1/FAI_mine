@@ -75,3 +75,7 @@ button {
 button:hover {
     background-color: #ddd;
 }
+
+.bg-veryDarkBlue {
+    background-color: #1a1a1a;
+}
