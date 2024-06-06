@@ -13,13 +13,6 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        function openMenu() {
-            var elem = document.getElementById("fainavlinks");
-            elem.classList.toggle("hidden");
-            var menu = document.getElementById("fainavlinks-donate");
-            menu.classList.toggle("hidden");
-        }
-
         function visitDonatePage() {
             window.open("https://gofund.me/c61e6ac1", "_blank");
         }
@@ -28,8 +21,50 @@
             const schoolNames = [
                 "Reedy High School",
                 "Frisco High School",
-                // ... (other school names)
-                "Central High School",
+                "Lebanon Trail High School",
+                "Wakeland High School",
+                "Manchester Essex Regional High School",
+                "Pine Crest High School",
+                "North Broward Prep High School",
+                "Dr. Michael Krop Senior High School",
+                "Abraham Lincoln High School",
+                "Saratoga High School",
+                "Bellarmine College Prepatory",
+                "New Tech High @ Coppell",
+                "Hebron High School",
+                "Prosper High School",
+                "Lewisville High School - Harmon",
+                "Flower Mound HS",
+                "Francis Howell North",
+                "The Adelson School",
+                "Ed W. Clark High School",
+                "The Meadows School",
+                "Montclair High School",
+                "Pioneer Heritage Middle School",
+                "Griffin Middle School",
+                "Green Level High School",
+                "Heritage High School",
+                "Ray Braswell High School",
+                "Centennial High School",
+                "Panther Creek High School",
+                "Cypress Ranch High School",
+                "Cypress Ranch High School",
+                "North Allegheny Senior High School",
+                "North Allegheny Intermediate High School",
+                "Parsippany Hills High School",
+                "Pine-Richland High School",
+                "Roy C. Ketcham High School",
+                "Benjamin Franklin High School",
+                "Gyanodaya International School",
+                "Y. B. Patil Polytechnic",
+                "BASIS International School Guangzhou",
+                "Guangzhou Tianxin Experimental School",
+                "Beijing Academy",
+                "Shanghai Guanghua Cambridge International School",
+                "Ulink College of Shanghai",
+                "The Woodlands High School",
+                "Lone Star High School",
+                "Central High School"
             ];
 
             let currentIndex = 0;
@@ -60,34 +95,18 @@
         });
     </script>
 </head>
-<body>
-    <header class="bg-[#FFDE59] sm:flex sm:justify-between shrink rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50">
-        <div class="flex items-center justify-between px-4 py-3">
-            <div>
-                <img src="images/failogo.png" alt="FAI" class="h-12" />
-            </div>
-            <div class="sm:hidden">
-                <button onclick="openMenu()" class="text-white sm:hidden">
-                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2z"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div id="fainavlinks" class="hidden px-5 pt-2 sm:pb-4 sm:flex">
-            <a href="index.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Home</a>
-            <a href="our-team.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Our Team</a>
-            <a href="contact.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Contact</a>
-            <a href="chapters.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Chapters</a>
-            <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Guest Lectures</a>
-            <a href="blog.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Blog</a>
-            <a href="about-us.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">About Us</a>
-        </div>
-        <div id="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
-            <a target="_blank" href="http://linktr.ee/faiapp" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Join Our Team</a>
-        </div>
-    </header>
-
+<body class="bg-black">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-team.html">Our Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="chapters.html">Chapters</a></li>
+            <li><a href="guest-lectures.html">Guest Lectures</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+        </ul>
+    </nav>
     <main class="px-2 sm:px-10 pt-24">
         <div class="text-center min-h-screen flex flex-col justify-center items-center sm:translate-y-10">
             <p class="text-7xl text-[#FFDE59] font-bold mb-2">FAI</p>
@@ -101,7 +120,6 @@
         <p>This is the home page.</p>
         <button id="clickMe">Click Me</button>
     </main>
-
     <footer class="bg-veryDarkBlue">
         <div class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
             <div class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
