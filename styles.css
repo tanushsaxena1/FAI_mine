@@ -3,7 +3,12 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #000; /* Set background color to black */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
 }
 
 header, footer {
@@ -42,19 +47,22 @@ nav ul li a:hover {
     background-color: #333;
 }
 
+header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .banner-image {
     width: 100%;
     height: auto;
     display: block;
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
 }
 
 main {
-    padding: 2em 0; /* Adjust padding */
+    padding: 2em;
     text-align: center;
     width: 100%;
-    background-color: #000; /* Set background color to black */
 }
 
 button {
@@ -62,94 +70,10 @@ button {
     font-size: 1em;
     margin-top: 1em;
     cursor: pointer;
-    background-color: #FFDE59; /* FAI's theme color for buttons */
-    border: none;
-    color: black;
-    border-radius: 0.5em;
 }
 
 button:hover {
     background-color: #ddd;
 }
 
-.bg-veryDarkBlue {
-    background-color: #1a1a1a;
-}
-
-.text-[#FFDE59] {
-    color: #FFDE59;
-}
-
-.font-bold {
-    font-weight: bold;
-}
-
-.text-7xl {
-    font-size: 4.5rem;
-}
-
-.text-3xl {
-    font-size: 1.875rem;
-}
-
-.mb-2 {
-    margin-bottom: 0.5rem;
-}
-
-.mb-3 {
-    margin-bottom: 0.75rem;
-}
-
-.mt-1 {
-    margin-top: 0.25rem;
-}
-
-.transition {
-    transition: all 0.3s ease-in-out;
-}
-
-.fade-in {
-    animation: fadeIn 800ms forwards;
-}
-
-.fade-out {
-    animation: fadeOut 150ms forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-.my-10 {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-}
-
-.mt-10 {
-    margin-top: 2.5rem;
-}
-
-.mb-5 {
-    margin-bottom: 1.25rem;
-}
-
-.mt-5 {
-    margin-top: 1.25rem;
-}
 
