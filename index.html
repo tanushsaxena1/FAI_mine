@@ -1,34 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="forest">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - My Website</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css"
+        rel="stylesheet"
+        type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function openMenu() {
+            var elem = document.getElementById("fainavlinks");
+            elem.classList.toggle("hidden");
+            var menu = document.getElementById("fainavlinks-donate");
+            menu.classList.toggle("hidden");
+        }
+
+        function visitDonatePage() {
+            window.open("https://gofund.me/c61e6ac1", "_blank");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const schoolNames = [
+                "Reedy High School",
+                "Frisco High School",
+                // ... (other school names)
+                "Central High School",
+            ];
+
+            let currentIndex = 0;
+            const textElement = document.getElementById("schoolName");
+
+            function updateSchoolName() {
+                textElement.classList.remove("fade-in");
+                textElement.classList.add("fade-out");
+
+                textElement.addEventListener(
+                    "animationend",
+                    function () {
+                        textElement.classList.remove("fade-out");
+
+                        const randomIndex = Math.floor(
+                            Math.random() * schoolNames.length
+                        );
+
+                        textElement.textContent = schoolNames[randomIndex];
+
+                        textElement.classList.add("fade-in");
+                    },
+                    { once: true }
+                );
+            }
+
+            setInterval(updateSchoolName, 2500);
+        });
+    </script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="our-team.html">Our Team</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="chapters.html">Chapters</a></li>
-            <li><a href="guest-lectures.html">Guest Lectures</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-        </ul>
-    </nav>
-    <header>
-        <img src="Drawing.sketchpad (6).png" alt="Banner Image" class="banner-image">
-
+    <header class="bg-[#FFDE59] sm:flex sm:justify-between shrink rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50">
+        <div class="flex items-center justify-between px-4 py-3">
+            <div>
+                <img src="images/failogo.png" alt="FAI" class="h-12" />
+            </div>
+            <div class="sm:hidden">
+                <button onclick="openMenu()" class="text-white sm:hidden">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="fainavlinks" class="hidden px-5 pt-2 sm:pb-4 sm:flex">
+            <a href="index.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Home</a>
+            <a href="our-team.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Our Team</a>
+            <a href="contact.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Contact</a>
+            <a href="chapters.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Chapters</a>
+            <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Guest Lectures</a>
+            <a href="blog.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Blog</a>
+            <a href="about-us.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">About Us</a>
+        </div>
+        <div id="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
+            <a target="_blank" href="http://linktr.ee/faiapp" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Join Our Team</a>
+        </div>
     </header>
-    <main>
+
+    <main class="px-2 sm:px-10 pt-24">
+        <div class="text-center min-h-screen flex flex-col justify-center items-center sm:translate-y-10">
+            <p class="text-7xl text-[#FFDE59] font-bold mb-2">FAI</p>
+            <p class="text-3xl text-white"> Empowering financial futures at </p>
+            <p id="schoolName" class="text-[#FFDE59] font-bold transition text-3xl mb-3 mt-1">Reedy High School</p>
+            <button class="bg-[#FFDE59] rounded-xl transition ease-in-out duration-300 hover:scale-105 mt-2 p-4 text-center text-black text-base font-semibold" onclick="visitDonatePage();">Donate</button>
+        </div>
+        <header>
+            <img src="Drawing.sketchpad (6).png" alt="Banner Image" class="banner-image">
+        </header>
         <p>This is the home page.</p>
         <button id="clickMe">Click Me</button>
     </main>
-    <footer>
-        <p>&copy; 2024 My Website</p>
+
+    <footer class="bg-veryDarkBlue">
+        <div class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
+            <div class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
+                <div class="mx-auto my-6 text-center text-white md:hidden">
+                    Add Copyright Stamp
+                </div>
+                <div>
+                    <img src="images/fai.png" class="h-12" alt="" />
+                </div>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://www.youtube.com/@FAI_Club" target="_blank">
+                        <img src="images/icon-youtube.svg" alt="" class="h-8" />
+                    </a>
+                    <a href="https://www.youtube.com/@FAI_Club" target="_blank">
+                        <img src="images/linkedin.jpg" alt="" class="h-8" />
+                    </a>
+                    <a href="https://www.instagram.com/fai__club/" target="_blank">
+                        <img src="images/Instagram Logo 2.png" alt="" class="h-8" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-around space-x-32">
+                <div class="flex flex-col space-y-3 text-white">
+                    <a href="index.html" class="hover:text-brightRed">Home</a>
+                    <a href="our-team.html" class="hover:text-brightRed">Our Team</a>
+                    <a href="contact.html" class="hover:text-brightRed">Contact</a>
+                    <a href="chapters.html" class="hover:text-brightRed">Chapters</a>
+                </div>
+                <div class="flex flex-col space-y-3 text-white">
+                    <a href="guest-lectures.html" class="hover:text-brightRed">Guest Lectures</a>
+                    <a href="blog.html" class="hover:text-brightRed">Blog</a>
+                    <a href="about-us.html" class="hover:text-brightRed">About Us</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-between">
+                <form>
+                    <div class="flex space-x-3">
+                        <input type="text" class="flex-1 px-4 rounded-full focus:outline-none" placeholder="Ask a Question" />
+                        <button class="px-6 py-2 text-black rounded-full bg-lime-100 hover:bg-green-500 focus:outline-none">
+                            Send
+                        </button>
+                    </div>
+                </form>
+                <div class="hidden text-white md:block">Add Copyright Stamp</div>
+            </div>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
