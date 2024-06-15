@@ -56,12 +56,23 @@ header {
     width: 100%;
     margin: 0;
     padding: 0;
+    position: relative; /* Needed to position the invisible button */
 }
 
 .banner-image {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.invisible-button {
+    position: absolute;
+    top: 20%; /* Adjust this to position correctly */
+    left: 25%; /* Adjust this to position correctly */
+    width: 50%; /* Adjust this to size correctly */
+    height: 20%; /* Adjust this to size correctly */
+    cursor: pointer;
+    background: transparent;
 }
 
 main {
@@ -167,4 +178,3 @@ button:hover {
 .fade-out {
     animation: fadeOut 150ms forwards;
 }
-
