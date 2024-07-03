@@ -1,36 +1,70 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <title>Finance and Investments Club</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        .header img {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+        }
+        .nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 20px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .about-us {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 80%;
+            margin: 20px auto;
+        }
+        .about-us h2 {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="our-team.html">Our Team</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="chapters.html">Chapters</a></li>
-            <li><a href="guest-lectures.html">Guest Lectures</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-        </ul>
-    </nav>
-    <header>
+    <div class="header">
         <img src="HOME.sketchpad (2).png" alt="Banner Image" class="banner-image">
-    </header>
-    <main>
-        <p>This is the home page.</p>
-        <button id="clickMe">Click Me</button>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Website</p>
-    </footer>
-    <script src="script.js"></script>
+    </div>
+    <div class="nav">
+        <a href="#">About Us</a>
+        <a href="#">Finance and Investments</a>
+        <a href="#">Club</a>
+    </div>
+    <div class="content">
+        <div class="about-us">
+            <h2>About Us</h2>
+            <p>The Finance and Investments (FAI) Club looks to empower students with the knowledge and skills to navigate the corporate world. FAI has evolved into a thriving 501(c)(3) non-profit dedicated to fostering financial literacy and education among students worldwide.</p>
+        </div>
+    </div>
 </body>
 </html>
-
-
